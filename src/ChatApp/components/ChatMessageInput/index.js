@@ -1,4 +1,5 @@
 import { useState } from "react";
+import EmojiPicker from "emoji-picker-react";
 
 import "./styles.css";
 
@@ -29,8 +30,18 @@ function createNewMessage(messageContent) {
 
 function ChatMessageInput({ onEnter }) {
   const [inputMessage, setInputMessage] = useState("");
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const onChange = (e) => {
     setInputMessage(e.target.value);
+  };
+
+  const onClickEmojiPicker = () => {
+    setShowEmojiPicker((prevValue) => !prevValue);
+  };
+
+  const onEmojiClick = ({ emoji }) => {
+    const newMessage = inputMessage + emoji;
+    setInputMessage(newMessage);
   };
 
   const onKeyDown = (e) => {
@@ -46,17 +57,26 @@ function ChatMessageInput({ onEnter }) {
   };
 
   return (
-    <div className="message-input-container">
-      <input
-        type="text"
-        placeholder="Type a message..."
-        className="message-input"
-        value={inputMessage}
-        onChange={onChange}
-        onKeyDown={onKeyDown}
+    <>
+      <EmojiPicker
+        open={showEmojiPicker}
+        className="emoji-picker"
+        onEmojiClick={onEmojiClick}
       />
-      {/* TOOD: Render emoji picker */}
-    </div>
+      <div className="message-input-container">
+        <input
+          type="text"
+          placeholder="Type a message..."
+          className="message-input"
+          value={inputMessage}
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+        />
+        <div className="emoji-picker-trigger" onClick={onClickEmojiPicker}>
+          <span>&#128512; </span>
+        </div>
+      </div>
+    </>
   );
 }
 

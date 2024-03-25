@@ -2,9 +2,14 @@
   border-radius: 20px;
   border: 1px solid lightgray;
   padding: 12px;
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; */
 
   display: flex;
   flex-direction: row;
+  margin: 16px;
 }
 
 .message-input {
@@ -14,3 +19,12 @@
   flex: 1;
 }
 
+.emoji-picker-trigger {
+  cursor: pointer;
+}
+
+.emoji-picker {
+  position: absolute;
+  right: 16px;
+  bottom: 50px;
+}
