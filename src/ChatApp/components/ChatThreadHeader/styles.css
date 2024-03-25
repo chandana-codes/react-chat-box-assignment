@@ -1,0 +1,21 @@
+
+.thread-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.thread-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.thread-name {
+  margin: 0px;
+}
+
+.thread-description {
+  margin: 4px 0px 0px 0px;
+}
