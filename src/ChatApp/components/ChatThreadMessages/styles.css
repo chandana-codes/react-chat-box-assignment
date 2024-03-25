@@ -1,8 +1,9 @@
 .messages-container {
   padding: 16px;
-  max-height: 600px;
   height: 600px;
-  overflow-y: scroll;
+  max-height: 600px;
 
- /* TODO: Render messages from bottom */
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
 }
