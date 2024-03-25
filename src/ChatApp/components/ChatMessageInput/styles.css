@@ -1,0 +1,16 @@
+.message-input-container {
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.message-input {
+  outline: none;
+  border: 0px;
+  background-color: transparent;
+  flex: 1;
+}
+
