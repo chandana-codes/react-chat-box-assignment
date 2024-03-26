@@ -2,6 +2,12 @@
 
 Some of the functionalities are inspired from whatsapp web.
 
+I messed up with git because of my old version of git. In `main` branch there is no commit history, if you want to see my commit history then check `master` branch.
+
+## Live Demo Link
+
+https://gc-react-chat-app.surge.sh/
+
 ## Problems solved:
 
 - Implement scrollbar for the chat messages container
