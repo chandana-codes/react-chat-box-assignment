@@ -1,0 +1,24 @@
+.user-mention-container{
+  max-height: 120px;
+  height: 120px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.user-info:hover{
+  background-color: gray;
+}
+
+.user-name{
+  margin-left: 5px;
+}
