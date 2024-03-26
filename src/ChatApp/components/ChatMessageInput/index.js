@@ -35,7 +35,10 @@ function ChatMessageInput({
     // console.log(e.key);
     if (e.key === "@") {
       setShowMentions(true);
-    } else if (e.key === "Backspace" && inputMessage.endsWith("@")) {
+    } else if (
+      ["Backspace", "Enter"].includes(e.key) &&
+      inputMessage.endsWith("@")
+    ) {
       setShowMentions(false);
     }
   };
